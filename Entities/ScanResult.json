@@ -1,0 +1,34 @@
+{
+  "name": "ScanResult",
+  "type": "object",
+  "properties": {
+    "scan_id": {
+      "type": "string",
+      "description": "Unique scan identifier"
+    },
+    "scan_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when scan was performed"
+    },
+    "targets": {
+      "type": "number",
+      "description": "Number of assets scanned"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Completed",
+        "In Progress",
+        "Failed"
+      ],
+      "description": "Status of the scan"
+    }
+  },
+  "required": [
+    "scan_id",
+    "scan_date",
+    "targets",
+    "status"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Vulnerability",
+  "type": "object",
+  "properties": {
+    "severity": {
+      "type": "string",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "description": "Severity level of the vulnerability"
+    },
+    "finding": {
+      "type": "string",
+      "description": "Description of the vulnerability found"
+    },
+    "asset": {
+      "type": "string",
+      "description": "Affected asset"
+    },
+    "remediation": {
+      "type": "string",
+      "description": "Suggested remediation steps"
+    }
+  },
+  "required": [
+    "severity",
+    "finding",
+    "asset",
+    "remediation"
+  ]
+}

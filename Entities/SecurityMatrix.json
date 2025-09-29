@@ -1,0 +1,28 @@
+{
+  "name": "SecurityMetric",
+  "type": "object",
+  "properties": {
+    "metric_name": {
+      "type": "string",
+      "description": "Name of the security metric"
+    },
+    "value": {
+      "type": "string",
+      "description": "Current value of the metric"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "overview",
+        "vulnerability",
+        "compliance"
+      ],
+      "description": "Category of the metric"
+    }
+  },
+  "required": [
+    "metric_name",
+    "value",
+    "category"
+  ]
+}

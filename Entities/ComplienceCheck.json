@@ -1,0 +1,32 @@
+{
+  "name": "ComplianceCheck",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pass",
+        "Fail"
+      ],
+      "description": "Compliance check result"
+    },
+    "check_id": {
+      "type": "string",
+      "description": "Compliance check identifier"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the compliance check"
+    },
+    "asset": {
+      "type": "string",
+      "description": "Asset being checked"
+    }
+  },
+  "required": [
+    "status",
+    "check_id",
+    "description",
+    "asset"
+  ]
+}

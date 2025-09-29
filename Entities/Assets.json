@@ -1,0 +1,45 @@
+{
+  "name": "Asset",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "description": "Unique identifier for the asset"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human readable asset name"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "EC2 Instance",
+        "S3 Bucket",
+        "RDS Database",
+        "Lambda Function",
+        "ELB"
+      ],
+      "description": "Type of cloud asset"
+    },
+    "region": {
+      "type": "string",
+      "description": "AWS region where asset is located"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Running",
+        "Stopped",
+        "Terminated"
+      ],
+      "description": "Current status of the asset"
+    }
+  },
+  "required": [
+    "asset_id",
+    "name",
+    "asset_type",
+    "region",
+    "status"
+  ]
+}
